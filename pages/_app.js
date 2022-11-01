@@ -1,5 +1,4 @@
 import { Analytics } from "@vercel/analytics/react";
-import "react-static-tweets/styles.css";
 
 import { MDXProvider } from "@mdx-js/react";
 import P from "../components/post/paragraph";

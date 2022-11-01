@@ -38,9 +38,9 @@ const components = {
 };
 
 const NextraPostLayout = ({ meta }) => {
-  return withViews(({ tweets, views, children }) => {
+  return withViews(({ views, children }) => {
     return (
-      <Post tweets={tweets}>
+      <Post>
         <Header title={meta.title} date={meta.date} views={views} />
         <Head>
           <meta property="og:title" content={meta.title} />

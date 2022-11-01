@@ -181,7 +181,7 @@ a(314, 159)
         </a>{" "}
         was introduced for{" "}
         <a
-          href="https://static-tweet.now.sh/#incremental-static-generation"
+          href="https://static-search.now.sh/#incremental-static-generation"
           target="_blank"
         >
           appending

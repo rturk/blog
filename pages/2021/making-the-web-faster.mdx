@@ -1,23 +1,15 @@
-import getTweets from "../../lib/get-tweets";
 import HR from "../../components/post/hr";
 import Figure, { Image } from "../../components/post/figure";
-import Tweet from "../../components/post/tweet";
 import Post from "../../components/layouts/post";
 import { H2 } from "../../components/post/heading";
 
-export async function getStaticProps() {
-  const tweets = await getTweets(MDXContent);
-  return { props: { tweets } };
-}
-
-export default function ({ children, tweets }) {
+export default function ({ children }) {
   return <Post 
     id="making-the-web-faster"
     title="Making the Web. Faster"
     description="Vercel is making a faster platform for those consuming the web and faster for those building for the web. And now that's more than just developers."
     og="https://res.cloudinary.com/rauchg/image/upload/v1624456141/blog/og/making-the-web_kuwgmz.png"
     date="June 23, 2021"
-    tweets={tweets}
   >{children}</Post>
 }
 
@@ -33,12 +25,6 @@ We'll use this investment to:
 
 <H2 id="next-momentum">1. Build the SDK for the Web</H2>
 
-<Tweet 
-  id="1374492662061953034"
-  caption={<span>
-    Next.js continues to grow organically as developers <a href="https://twitter.com/vincentchw/status/1392775589094838277">explain it</a> and <a href="https://twitter.com/vadim_kravcenko/status/1401937274972037122">recommend it</a> to one another
-  </span>}
-/>
 
 Unlike other software development platforms, the Web never came with an SDK or Standard Development Kit.
 
@@ -53,7 +39,6 @@ React, [now 8 years old](https://reactjs.org/blog/2013/06/05/why-react.html), ha
 Next.js builds on this formidable foundation to give developers and companies
 a meaningful starting point to build great pages, [open sourcing the lessons](https://nextjs.org/blog/next-11#conformance) learned from the giants of the Web.
 
-<Tweet id="1390309469561659396" />
 
 <H2 id="realtime">2. Lower the barrier of entry</H2>
 
@@ -65,7 +50,6 @@ frictionless collaboration:
 - Integrating it into Git for continuous integration
 - Manually pushing and waiting to share progress with your team
 
-<Tweet id="1404291533042372608" caption="We can all contribute to the web, faster" />
 
 Perhaps the most incredible aspect of the Web is that it's not a read-only medium.
 Each Web browser is simultaneously the [consumption and creation mechanism](https://twitter.com/sulco/status/1177559150563344384).
@@ -75,13 +59,9 @@ everyone can contribute to. Whether it's to pitch in an idea or an edit,
 by an experienced developer or a new designer, from a local editor or the
 browser itself.
 
-<Tweet
-  id="1404833080435634179"
-/>
 
 <H2 id="real">3. Focus on the end-user</H2>
 
-<Tweet id="1404218263354101761" />
 
 A particularly interesting challenge of building a platform and tooling 
 company is that you have **two users** (whether it's acknowledged or not):

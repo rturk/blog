@@ -1,22 +1,14 @@
-import getTweets from "../../lib/get-tweets";
 import Figure, { Image } from "../../components/post/figure";
-import Tweet from "../../components/post/tweet";
 import Post from "../../components/layouts/post";
 import { H2 } from "../../components/post/heading";
 
-export async function getStaticProps() {
-  const tweets = await getTweets(MDXContent);
-  return { props: { tweets } };
-}
-
-export default function ({ children, tweets }) {
+export default function ({ children }) {
   return <Post 
     id="develop-preview-test"
     title="Develop, Preview, Test"
     description="The rise of deployment previews and serverless testing infrastructure is revolutionizing the way we test Web projects."
     og="https://res.cloudinary.com/rauchg/image/upload/v1591890273/blog/og/4C8D37F4-9C56-4251-894B-F48EF289C798_fxqt6c.png"
     date="June 11, 2020"
-    tweets={tweets}
   >{children}</Post>
 }
 
@@ -144,11 +136,6 @@ Not only are certain
 [features these days only enabled when SSL is on](https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts),
 but having every other production feature enabled, like brotli
 compression and HTTP/2, reduces your risk of outages:
-
-<Tweet
-  id="921185541487341568"
-  caption="The risks of environment differences, as explained by Kubernetes' creator"
-/>
 
 Having made staging instant, prod-like and cost-effective, the remaining
 objection is that running the actual end-to-end tests would be expensive

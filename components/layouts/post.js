@@ -1,16 +1,14 @@
 import React from "react";
 import Page from "./main";
-import { Tweets } from "../../lib/tweets";
 import Head from "next/head";
 import Header from "../post/header";
-import { TwitterContextProvider } from "react-static-tweets";
 import { Suspense } from "react";
 import { ConvexProvider, ConvexReactClient } from "convex/react";
 import convexConfig from "@/convex.json";
 
 const convex = new ConvexReactClient(convexConfig.origin);
 
-const Post = ({ id, tweets, children, title, date, description, og }) => (
+const Post = ({ id, children, title, date, description, og }) => (
   <Page>
     <Head>
       <meta property="og:title" content={title} />
@@ -20,14 +18,6 @@ const Post = ({ id, tweets, children, title, date, description, og }) => (
       <meta name="twitter:site" content="@rauchg" />
       <meta property="og:image" content={og} />
     </Head>
-    <Tweets.Provider value={tweets}>
-      <TwitterContextProvider
-        value={{
-          swrOptions: {
-            isPaused: () => true,
-          },
-        }}
-      >
         <main>
           <article>
             <ConvexProvider client={convex}>
@@ -36,8 +26,6 @@ const Post = ({ id, tweets, children, title, date, description, og }) => (
             <Suspense fallback={null}>{children}</Suspense>
           </article>
         </main>
-      </TwitterContextProvider>
-    </Tweets.Provider>
     <style jsx>{`
       main {
         padding: 15px;
