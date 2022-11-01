@@ -3,10 +3,6 @@ import Page from "./main";
 import Head from "next/head";
 import Header from "../post/header";
 import { Suspense } from "react";
-import { ConvexProvider, ConvexReactClient } from "convex/react";
-import convexConfig from "@/convex.json";
-
-const convex = new ConvexReactClient(convexConfig.origin);
 
 const Post = ({ id, children, title, date, description, og }) => (
   <Page>
@@ -20,9 +16,7 @@ const Post = ({ id, children, title, date, description, og }) => (
     </Head>
         <main>
           <article>
-            <ConvexProvider client={convex}>
-              <Header id={id} title={title} date={date} />
-            </ConvexProvider>
+            <Header id={id} title={title} date={date} />
             <Suspense fallback={null}>{children}</Suspense>
           </article>
         </main>

@@ -2,7 +2,6 @@ import Head from "next/head";
 import { useState, useEffect } from "react";
 import TimeAgo from "../time-ago";
 import NextImage from "next/image";
-import Views from "./views";
 
 const Header = ({ id, title, date }) => {
   const [isMounted, setIsMounted] = useState(false);
@@ -48,7 +47,7 @@ const Header = ({ id, title, date }) => {
           ) : null}
         </span>
 
-        <Views id={new Date(date).getFullYear() + "-" + id} />
+        {/* <Views id={new Date(date).getFullYear() + "-" + id} /> */}
       </nav>
       <style jsx>{`
         nav {
