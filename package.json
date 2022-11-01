@@ -1,7 +1,7 @@
 {
-  "name": "rauchg-blog",
+  "name": "rafael-turk-blog",
   "license": "MIT",
-  "description": "rauchg.com (blog)",
+  "description": "rafaelturk.com (blog)",
   "dependencies": {
     "@mdx-js/loader": "^2.1.1",
     "@mdx-js/react": "^2.1.1",
