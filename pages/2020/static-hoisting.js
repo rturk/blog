@@ -13,7 +13,7 @@ export default function StaticHoisting() {
       title="Static Hoisting"
       description="From static hosting, to static hoisting"
       date="May 2, 2020"
-      og="https://rauchg.com/og/static-hoisting.png"
+      og="https://rafaelturk.com/og/static-hoisting.png"
     >
       <P>
         Since I published my{" "}

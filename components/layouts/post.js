@@ -11,7 +11,7 @@ const Post = ({ id, children, title, date, description, og }) => (
       <meta property="og:site_name" content="Rafael Turk's blog" />
       <meta property="og:description" content={description} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@rauchg" />
+      <meta name="twitter:site" content="@rafaturk" />
       <meta property="og:image" content={og} />
     </Head>
         <main>
