@@ -2,10 +2,7 @@ import Head from "next/head";
 import reset from "../../css/reset";
 import typography from "../../css/typography";
 import colors from "../../css/colors";
-import nprogress from "../../css/nprogress";
 import Header from "../header";
-
-import "nprogress";
 
 const Main = ({ description = null, children }) => {
   return (
@@ -21,9 +18,6 @@ const Main = ({ description = null, children }) => {
       </style>
       <style jsx global>
         {colors}
-      </style>
-      <style jsx global>
-        {nprogress}
       </style>
       <style jsx global>
         {typography}
