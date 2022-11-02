@@ -1,5 +1,3 @@
-import { Analytics } from "@vercel/analytics/react";
-
 import { MDXProvider } from "@mdx-js/react";
 import P from "../components/post/paragraph";
 import Link from "next/link";
@@ -36,7 +34,6 @@ export default function App({ Component, pageProps }) {
       <MDXProvider components={components}>
         <Component {...pageProps} />
       </MDXProvider>
-      <Analytics />
     </>
   );
 }
