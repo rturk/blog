@@ -5,10 +5,12 @@ const Logo = () => (
       span {
         font-weight: bold;
         font-size: 16px;
-        padding: 4px;
-        // display: inline-flex;
-        // align-items: center;
+        text-decoration: none;
+        color: #000;
+        transition: 150ms background-color ease;
+        padding: 5px;
       }
+
     `}</style>
   </span>
 );
