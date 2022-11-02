@@ -29,12 +29,7 @@ const Main = ({ description = null, children }) => {
 
       <style jsx>{`
         main {
-          padding: 10px;
-        }
-        @media (max-width: 600px) {
-          main {
-            padding: 20px;
-          }
+          padding: 20px;
         }
       `}</style>
     </main>
