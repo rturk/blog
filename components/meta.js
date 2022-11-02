@@ -10,12 +10,6 @@ const Meta = () => (
   <div>
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link
-        href="/atom"
-        type="application/atom+xml"
-        rel="alternate"
-        title="Guillermo Rauch"
-      />
     </Head>
 
     {/* global styles */}
