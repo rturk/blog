@@ -46,8 +46,6 @@ const Header = ({ id, title, date }) => {
             </span>
           ) : null}
         </span>
-
-        {/* <Views id={new Date(date).getFullYear() + "-" + id} /> */}
       </nav>
       <style jsx>{`
         nav {
