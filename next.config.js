@@ -13,6 +13,7 @@ module.exports = withMDX({
   reactStrictMode: true,
   swcMinify: true,
   images: {
+    unoptimized: true, 
     domains: [
       "pbs.twimg.com",
       "abs.twimg.com",
