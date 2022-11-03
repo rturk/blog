@@ -1,6 +1,6 @@
 # blog
 
-This is the blog that powers `rafaelturk.com`.
+This is the blog that powers `(https://rafaelturk.com)`.
 
 ## How to run
 

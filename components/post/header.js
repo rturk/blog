@@ -48,6 +48,9 @@ const Header = ({ id, title, date }) => {
         </span>
       </nav>
       <style jsx>{`
+        main {
+          margin-bottom: 15px;  
+        }
         nav {
           display: flex;
           justify-content: space-between;
