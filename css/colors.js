@@ -2,7 +2,7 @@ import css from "styled-jsx/css";
 
 const style = css.global`
   :root {
-    --link-color: #0c00ff;
+    --link-color: #0b00eb;
     --link-highlight: yellow;
     --meta-text-color: #4f4f4f;
   }

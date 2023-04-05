@@ -49,7 +49,7 @@ const Home = ({ posts }) => (
           }
         }
 
-        @media (min-width: 500px) {
+        @media (min-width: 550px) {
           ul {
             padding: 20px 0;
             max-width: 42rem;
@@ -61,16 +61,16 @@ const Home = ({ posts }) => (
           }
 
           ul li a {
-            padding: 10px 15px;
+            padding: 8px 15px;
             transition: 150ms background-color ease-in;
           }
 
           ul li span {
             display: inline-block;
-            width: 160px;
-            padding-right: 10px;
+            width: 70px;
+            padding-right: 8px;
             text-align: right;
-            font-size: inherit;
+            _font-size: inherit;
           }
         }
       `}</style>
