@@ -97,10 +97,10 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       posts: postsData.map(post => {
         const frontmatter = getPostFrontmatter(post.content);
-
+        const _date = new Date(frontmatter.date);
         return {
           ...frontmatter,
-          date: `${frontmatter.date.getFullYear()}-${padTo2Digits(frontmatter.date.getMonth()+1)}`,
+          date: `${_date.getFullYear()}-${padTo2Digits(_date.getMonth()+1)}`,
           url: `/posts/${post.id}`,
         }
       }),
