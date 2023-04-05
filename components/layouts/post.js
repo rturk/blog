@@ -23,7 +23,8 @@ const Post = ({ id, children, title, date, description, og }) => (
     <style jsx>{`
       main {
         padding: 15px;
-        font-size: 18px;
+        font-size: 19px;
+        font-family: serif;
       }
 
       article {
@@ -32,7 +33,7 @@ const Post = ({ id, children, title, date, description, og }) => (
 
       @media (min-width: 500px) {
         main {
-          max-width: 42rem;
+          max-width: 42.5rem;
           margin: auto;
         }
       }
