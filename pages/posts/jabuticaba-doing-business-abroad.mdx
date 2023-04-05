@@ -1,19 +1,14 @@
-import HR from "../../components/post/hr";
-import Figure, { Image } from "../../components/post/figure";
 import Post from "../../components/layouts/post";
-import { H2 } from "../../components/post/heading";
 
-export default function ({ children }) {
-  return <Post 
-    id="making-the-web-faster"
-    title="Making the Web. Faster"
-    description="Vercel is making a faster platform for those consuming the web and faster for those building for the web. And now that's more than just developers."
-    og="https://res.cloudinary.com/rauchg/image/upload/v1624456141/blog/og/making-the-web_kuwgmz.png"
-    date="June 23, 2021"
-  >{children}</Post>
+export const meta = {
+  title: "Jabuticaba: Doing Business Abroad",
+  description: "Jabuticaba tree a unique tree with equality different fruits that alegelly only grows in brazil can teach a lot about doing business abroad",
+  date: new Date(2022, 10, 2), // 2022-11-02
 }
 
-Following our [Series B last December](/2020/next-for-vercel), I'm happy to announce we've raised a [**$102M Series C**](https://techcrunch.com/2021/06/23/vercel-raises-102m-series-c-for-its-next-js-based-front-end-development-platform) from existing and new investors.
+**Jabuticaba** In Brazilian politics, and less commonly in everyday speech, *Jabuticaba* is a slang that describes a political or legal setting that is considered absurd, unusual, or needlessly complex, among others, that could only exist in a country like Brazil. It is a reference to the popular wisdom that jabuticaba trees can only grow in Brazil. 
+
+ [Series B last December](/2020/next-for-vercel), I'm happy to announce we've raised a [**$102M Series C**](https://techcrunch.com/2021/06/23/vercel-raises-102m-series-c-for-its-next-js-based-front-end-development-platform) from existing and new investors.
 
 Our vision of the Web is a global realtime medium for both creators and consumers,
 where all friction and latency are eliminated.
@@ -23,26 +18,16 @@ We'll use this investment to:
 2. [**Lower the barrier of entry**](#realtime)
 3. [**Focus on the end-user**](#real)
 
-<H2 id="next-momentum">1. Build the SDK for the Web</H2>
-
+## 1. Hire and develop the best
 
 Unlike other software development platforms, the Web never came with an SDK or Standard Development Kit.
-
-While new browser APIs are constantly being added, the responsibility still falls on the developer to assemble them into an _engine_ for every new project.
-
-The resulting diversity of tools and choices makes the Web the innovative and dynamic
-medium that it is, but it can also be a major obstacle, as companies rally 
-to reinvent themselves in the digital medium.
-
-React, [now 8 years old](https://reactjs.org/blog/2013/06/05/why-react.html), has proven to be a durable abstraction and [building block](https://twitter.com/rauchg/status/1068183829737664512?lang=en), a narrative violation of the common wisdom that "frontend frameworks are changed every week."
 
 Next.js builds on this formidable foundation to give developers and companies
 a meaningful starting point to build great pages, [open sourcing the lessons](https://nextjs.org/blog/next-11#conformance) learned from the giants of the Web.
 
 
-<H2 id="realtime">2. Lower the barrier of entry</H2>
+## id="realtime">2. Embrace conflict
 
-Vercel [has](https://twitter.com/bobfmuller/status/1404795808525004805) [given](https://twitter.com/erikras/status/1382420067485417477) [developers](https://twitter.com/otpfy/status/1380458535356669953) access to global infrastructure to
 deploy and scale frontend projects. But significant challenges remain to
 frictionless collaboration:
 
@@ -60,7 +45,7 @@ by an experienced developer or a new designer, from a local editor or the
 browser itself.
 
 
-<H2 id="real">3. Focus on the end-user</H2>
+## id="real">3. Focus on the end-user
 
 
 A particularly interesting challenge of building a platform and tooling 
@@ -82,3 +67,7 @@ we make. To name some examples:
 Our primary fitness function is your success for your customers. Not
 every visitor might understand fully how every page is built, but if the
 experience is delightful and fast, they ought to think it was powered by Vercel.
+
+## 4. Relentless passion
+
+export default ({ children }) => <Post meta={meta}>{children}</Post>;

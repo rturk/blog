@@ -1,18 +1,14 @@
-import HR from "../../components/post/hr";
-import Figure, { Image } from "../../components/post/figure";
 import Post from "../../components/layouts/post";
-import { H2 } from "../../components/post/heading";
 
-export default function ({ children }) {
-  return <Post 
-    id="jabuticaba-doing-business-abroad"
-    title="Jabuticaba: Doing Business Abroad"
-    description="Jabuticaba tree a unique tree with equality different fruits that alegelly only grows in brazil can teach a lot about doing business abroad"
-    date="Nov 2, 2022"
-  >{children}</Post>
+export const meta = {
+  title: "Chief Unblocking Officer",
+  description: "CUO - The future of true leadership",
+  date: new Date(2022, 10, 2), // 2022-11-02
 }
 
-**Jabuticaba** In Brazilian politics, and less commonly in everyday speech, *Jabuticaba* is a slang that describes a political or legal setting that is considered absurd, unusual, or needlessly complex, among others, that could only exist in a country like Brazil. It is a reference to the popular wisdom that jabuticaba trees can only grow in Brazil. 
+**Intel** once the world's largest chipmaker for more than 30 years, has been dethroned from its position. Manufacturing delays, failure to enter the mobile chips market, and losing market share in the PC and data centre segment to competitors.
+
+**Boeing**
 
  [Series B last December](/2020/next-for-vercel), I'm happy to announce we've raised a [**$102M Series C**](https://techcrunch.com/2021/06/23/vercel-raises-102m-series-c-for-its-next-js-based-front-end-development-platform) from existing and new investors.
 
@@ -24,17 +20,15 @@ We'll use this investment to:
 2. [**Lower the barrier of entry**](#realtime)
 3. [**Focus on the end-user**](#real)
 
-<H2 id="hire-the-best">1. Hire and develop the best</H2>
-
+## 1. Hire and develop the best
 
 Unlike other software development platforms, the Web never came with an SDK or Standard Development Kit.
-
 
 Next.js builds on this formidable foundation to give developers and companies
 a meaningful starting point to build great pages, [open sourcing the lessons](https://nextjs.org/blog/next-11#conformance) learned from the giants of the Web.
 
 
-<H2 id="realtime">2. Embrace conflict</H2>
+## 2. Embrace conflict
 
 deploy and scale frontend projects. But significant challenges remain to
 frictionless collaboration:
@@ -44,8 +38,8 @@ frictionless collaboration:
 - Manually pushing and waiting to share progress with your team
 
 
-Perhaps the most incredible aspect of the Web is that it's not a read-only medium.
-Each Web browser is simultaneously the [consumption and creation mechanism](https://twitter.com/sulco/status/1177559150563344384).
+Perhaps the most incredible aspect of diverse group of smart people is that different ideas will rise.
+Each Web browser is simultaneously the [consumption and creation mechanism](https://twitter.com/sulc  o/status/1177559150563344384).
 
 With [Next.js Live](https://nextjs.org/live), we want to build a Web that 
 everyone can contribute to. Whether it's to pitch in an idea or an edit,
@@ -53,8 +47,7 @@ by an experienced developer or a new designer, from a local editor or the
 browser itself.
 
 
-<H2 id="real">3. Focus on the end-user</H2>
-
+## 3. Focus on the end-user
 
 A particularly interesting challenge of building a platform and tooling 
 company is that you have **two users** (whether it's acknowledged or not):
@@ -66,7 +59,7 @@ No matter how many downloads Next.js gets, or how delightful and
 realtime the development experience, a universal truth remains: **[the customer is king](https://en.wikipedia.org/wiki/The_customer_is_always_right)**.
 
 Performance for the end-user has been baked in the design of everything
-we make. To name some examples:
+we make. To name some examples:Perhaps the most incredible aspect
 
 - Next.js was born out of the insight that React in its initial Single Page Application presentation was putting the rendering burden on the user's device that should have been on the [server](https://reactjs.org/blog/2020/12/21/data-fetching-with-react-server-components.html) instead. 
 - [Vercel Analytics](https://vercel.com/analytics) prioritized giving you a Real Experience Score calculated by each device, rather than just listing traffic stats or TTFB latencies.
@@ -76,4 +69,7 @@ Our primary fitness function is your success for your customers. Not
 every visitor might understand fully how every page is built, but if the
 experience is delightful and fast, they ought to think it was powered by Vercel.
 
-<H2 id="real">4. Relentless passion</H2>
+## 4. Relentless passion
+
+
+export default ({ children }) => <Post meta={meta}>{children}</Post>
