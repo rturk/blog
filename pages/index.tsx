@@ -1,19 +1,12 @@
-import Layout from "../components/layouts/main";
 import Link from "next/link";
-import postsData from "../posts.json";
+import fs from 'fs/promises';
+import path from 'path';
 import { Suspense } from "react";
-const { posts } = postsData;
+import { GetStaticProps } from "next";
 
-export function getStaticProps() {
-  return {
-    props: {
-      posts: posts.map(post => ({
-        ...post,
-        url: `${new Date(post.date).getFullYear()}/${post.id}`,
-      })),
-    },
-  };
-}
+import Layout from "../components/layouts/main";
+
+import { getPostFrontmatter } from '../utils/getPostFrontmatter';
 
 const Home = ({ posts }) => (
   <Suspense fallback={null}>
@@ -86,3 +79,27 @@ const Home = ({ posts }) => (
 );
 
 export default Home;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const POSTS_DIR = path.resolve(process.cwd(), 'pages', 'posts');
+
+  const posts = await fs.readdir(POSTS_DIR);
+  const postsData = await Promise.all(posts.map(async (post) => ({
+    id: post.replace(/\.mdx$/, ''),
+    content: await fs.readFile(path.join(POSTS_DIR, post), 'utf-8'),
+  })));
+
+  return {
+    props: {
+      posts: postsData.map(post => {
+        const frontmatter = getPostFrontmatter(post.content);
+
+        return {
+          ...frontmatter,
+          date: frontmatter.date.toISOString().split('T')[0],
+          url: `/posts/${post.id}`,
+        }
+      }),
+    },
+  }
+}
