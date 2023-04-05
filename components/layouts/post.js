@@ -2,7 +2,7 @@ import React from "react";
 import Page from "./main";
 import Head from "next/head";
 import Header from "../post/header";
-import { Suspense } from "react";
+// import { Suspense } from "react";
 
 const Post = ({ id, children, meta }) => {
   const { title, date, description, og } = meta;
@@ -20,13 +20,15 @@ const Post = ({ id, children, meta }) => {
           <main>
             <article>
               <Header id={id} title={title} date={date.toLocaleString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' })} />
-              <Suspense fallback={null}>{children}</Suspense>
+              {/* <Suspense fallback={null}>{children}</Suspense> */}
+              {children}
             </article>
           </main>
       <style jsx>{`
         main {
           padding: 15px;
           font-size: 18px;
+          font-family: serif;
         }
 
         article {

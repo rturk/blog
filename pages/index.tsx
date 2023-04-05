@@ -12,8 +12,8 @@ const Home = ({ posts }) => (
   <Suspense fallback={null}>
     <Layout description="Rafael Turk's blog">
       <ul>
-        {posts.map(post => (
-          <li key={post.id}>
+        {posts.map((post, key) => (
+          <li key={key}>
             <span>{post.date}</span>
             <Link href={post.url} legacyBehavior>
               <a href={post.url}>{post.title}</a>
@@ -80,6 +80,10 @@ const Home = ({ posts }) => (
 
 export default Home;
 
+function padTo2Digits(num) {
+  return num.toString().padStart(2, '0');
+}
+
 export const getStaticProps: GetStaticProps = async () => {
   const POSTS_DIR = path.resolve(process.cwd(), 'pages', 'posts');
 
@@ -96,7 +100,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
         return {
           ...frontmatter,
-          date: frontmatter.date.toISOString().split('T')[0],
+          date: `${frontmatter.date.getFullYear()}-${padTo2Digits(frontmatter.date.getMonth()+1)}`,
           url: `/posts/${post.id}`,
         }
       }),
