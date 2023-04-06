@@ -6,8 +6,6 @@ import { GetStaticProps } from "next";
 
 import Layout from "../components/layouts/main";
 
-import { getPostFrontmatter } from '../utils/getPostFrontmatter';
-
 const Home = ({ posts }) => (
   <Suspense fallback={null}>
     <Layout description="Rafael Turk's blog">
@@ -90,16 +88,15 @@ export const getStaticProps: GetStaticProps = async () => {
   const posts = await fs.readdir(POSTS_DIR);
   const postsData = await Promise.all(posts.map(async (post) => ({
     id: post.replace(/\.mdx$/, ''),
-    content: await fs.readFile(path.join(POSTS_DIR, post), 'utf-8'),
+    meta: (await import(`./posts/${post}`)).meta,
   })));
 
   return {
     props: {
       posts: postsData.map(post => {
-        const frontmatter = getPostFrontmatter(post.content);
-        const _date = new Date(frontmatter.date);
+        const _date = new Date(post.meta.date);
         return {
-          ...frontmatter,
+          ...post.meta,
           date: `${_date.getFullYear()}-${padTo2Digits(_date.getMonth()+1)}`,
           url: `/posts/${post.id}`,
         }
