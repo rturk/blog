@@ -21,7 +21,7 @@ export const getPostFrontmatter = (post: string) => {
   const frontmatter: Frontmatter = {};
 
   visit(tree, 'mdxjsEsm', (node) => {
-    if (!node.value.includes('export const meta = ')) {
+    if (!node.value?.includes('export const meta = ')) {
       return;
     }
 
