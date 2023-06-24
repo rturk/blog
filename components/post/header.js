@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useState, useEffect } from "react";
 import TimeAgo from "../time-ago";
 import NextImage from "next/image";
+import RafaelTurk from './img/rafael-turk.jpeg';
 
 const Header = ({ id, title, date }) => {
   const [isMounted, setIsMounted] = useState(false);
@@ -25,7 +26,7 @@ const Header = ({ id, title, date }) => {
           >
             <span className="img">
               <NextImage
-                src="/images/rauchg.png"
+                src={RafaelTurk}
                 width={25}
                 height={25}
                 layout="fixed"
