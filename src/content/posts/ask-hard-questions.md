@@ -1,14 +1,14 @@
 ---
 title: "Ask yourself hard questions. Questions for which you fear the answer."
-description: "Innovation starts with questions you're afraid to ask. Ask questions that would make everyone uncomfortable because the mere possibility that there is an answer would suck the air out of the room and leave everyone speechless."
+description: "Innovation starts with questions you're afraid to ask. Ask questions that would make everyone uncomfortable, because the mere possibility that there is an answer would suck the air out of the room and leave everyone speechless."
 date: 2024-10-31
 ---
 
 Ask yourself hard questions.
 
-Ask Questions you're afraid of the answer. 
+Ask questions you're afraid to hear the answer to.
 
-Ask questions that unsettle the rest of the organisation. Questions that will make even your CEO uncomfortable, because the mere possibility that there is an answer would suck the air out of the room and leave everyone speechless.
+Ask questions that unsettle the rest of the organisation. Questions that would make even your CEO uncomfortable, because the mere possibility that there is an answer would suck the air out of the room and leave everyone speechless.
 
 People who ask hard questions are often pushed to the margins, or fired. Not because of the question, but because many people don't want to hear the answer. It hurts to hear what you don't want to hear.
 
@@ -52,7 +52,7 @@ This year I allowed myself to ask a hard question: what if we built our own priv
 
 Gradually, we took apart every "no", including the ones from our own team. For every criticism, we learned something and improved.
 
-A project that started with the goal of cutting costs turned into a fantastic continuous building platform, and became a fundamental part of how we innovate.
+A project that started with the goal of cutting costs turned into a fantastic continuous build platform, and became a fundamental part of how we innovate.
 
 The result: lower costs, better systems, and a real step forward in our ability to innovate.
 
