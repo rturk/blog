@@ -45,7 +45,7 @@ body {
 }
 
 .wrap {
-  max-width: 42rem;
+  max-width: 46rem;
   margin: 0 auto;
   padding: 0 16px;
 }
@@ -137,7 +137,7 @@ a { color: var(--accent); text-underline-offset: 3px; }
 }
 .back:hover { color: var(--accent); }
 
-article { max-width: 38rem; }
+article { max-width: none; }
 article header {
   margin-bottom: 36px;
   padding-bottom: 28px;
