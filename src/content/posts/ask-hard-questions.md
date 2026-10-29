@@ -4,8 +4,6 @@ description: "Innovation starts with questions you're afraid to ask. Ask questio
 date: 2024-10-31
 ---
 
-Ask yourself hard questions.
-
 Ask questions you're afraid to hear the answer to.
 
 Ask questions that unsettle the rest of the organisation. Questions that would make even your CEO uncomfortable, because the mere possibility that there is an answer would suck the air out of the room and leave everyone speechless.
@@ -40,11 +38,11 @@ For every "no" you get, work to understand the objections, the challenges and th
 
 ## Good ideas get better when questioned
 
-Good ideas are hard to ignore. Good ideas survive the test of time. Good ideas gain strength when they're questioned and, to many people's disbelief, they even get better.
+Good ideas are hard to ignore. Good ideas survive the test of time. Good ideas gain strength when they're questioned and, to many people's surprise, they even get better.
 
 Good ideas prevail, simply because they are good.
 
-Your role is only one: make sure your idea isn't ignored, keep collecting feedback, and keep improving it.
+You have only one job: make sure your idea isn't ignored, keep collecting feedback, and keep improving it.
 
 ## What if we built our own private cloud?
 
@@ -56,7 +54,7 @@ A project that started with the goal of cutting costs turned into a fantastic co
 
 The result: lower costs, better systems, and a real step forward in our ability to innovate.
 
-Woovi's success with Pix comes from the fact that we didn't stay on the margins. Between many mistakes and successes throughout the year, we got more right than wrong.
+Woovi's success with Pix comes from the fact that we didn't stay on the margins. Through many mistakes and successes this year, we got more right than wrong.
 
 ## What's yours?
 
