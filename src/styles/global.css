@@ -231,3 +231,15 @@ article .meta { color: var(--muted); font-size: 14px; }
   .intro img { flex-basis: 56px; width: 56px; height: 56px; }
   article h1 { font-size: 1.85rem; }
 }
+
+/* Figures in posts */
+.prose figure { margin: 2em 0; }
+.prose figure img { display: block; width: 100%; border-radius: 8px; }
+.prose figcaption {
+  margin-top: 8px;
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+}
+.prose figcaption a { color: inherit; }
