@@ -1,8 +1,7 @@
 ---
 title: "Ask yourself hard questions. Questions for which you fear the answer."
-description: "Innovation starts with questions you're afraid to ask. Ask questions that would make everone unconfortable because the mere possibility that there is an answer would suck the air out of the room and leave everyone speechless."
+description: "Innovation starts with questions you're afraid to ask. Ask questions that would make everyone uncomfortable because the mere possibility that there is an answer would suck the air out of the room and leave everyone speechless."
 date: 2024-10-31
-draft: true
 ---
 
 Ask yourself hard questions.
