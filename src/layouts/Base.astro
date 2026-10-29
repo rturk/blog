@@ -22,7 +22,6 @@ const ogImage = new URL("/rafael-turk.jpeg", Astro.site);
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" type="application/rss+xml" title={SITE_TITLE} href="/rss.xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta property="og:type" content={type} />
     <meta property="og:site_name" content="Rafael Turk's blog" />
@@ -37,7 +36,6 @@ const ogImage = new URL("/rafael-turk.jpeg", Astro.site);
     <header class="site-header wrap">
       <a class="logo" href="/">rafaelturk.com</a>
       <nav>
-        <a href="/rss.xml">RSS</a>
         <a href={`https://x.com/${TWITTER}`} target="_blank" rel="noopener">Follow</a>
       </nav>
     </header>
