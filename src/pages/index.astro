@@ -1,0 +1,20 @@
+---
+import Base from "../layouts/Base.astro";
+import { getPosts, formatDate } from "../lib/posts";
+
+const posts = await getPosts();
+---
+
+<Base>
+  <ul class="posts">
+    {posts.map(post => (
+      <li>
+        <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date, "month")}</time>
+        <span>
+          <a href={`/posts/${post.id}`}>{post.data.title}</a>
+          {post.data.draft && <span class="draft">draft</span>}
+        </span>
+      </li>
+    ))}
+  </ul>
+</Base>

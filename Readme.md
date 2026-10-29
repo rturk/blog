@@ -1,55 +1,38 @@
 # blog
 
-This is the blog that powers `(https://rafaelturk.com)`.
+Source for [rafaelturk.com](https://rafaelturk.com), built with [Astro](https://astro.build) and served as static files from Cloudflare.
 
-## How to run
+## Writing
 
-First, install [Vercel CLI](https://vercel.com/download).
+Posts live in `src/content/posts/` as Markdown (`.md`) or MDX (`.mdx`). The filename is the URL slug (`/posts/<filename>`).
 
-### Development
+```md
+---
+title: "Post title"
+description: "One-line summary used for SEO, social cards and RSS"
+date: 2026-10-28
+draft: true # optional; drafts show in `npm run dev` only
+---
 
+Write here.
 ```
-vc dev
-```
 
-### Deployment
+Images go in `public/images/<slug>/` and are referenced as `/images/<slug>/file.png`.
 
-#### Staging
+## Development
 
 ```bash
-vc
+npm install
+npm run dev      # http://localhost:4321
+npm run build    # outputs static site to dist/
+npm run preview  # serve dist/ locally
 ```
 
-This is the equivalent of submitting a PR with the [GitHub integration](https://vercel.com/github)
+## Deployment
 
-#### Production
+Cloudflare builds from this repo:
 
-```bash
-vc --prod
-```
+- Build command: `npm run build`
+- Output directory: `dist`
 
-This is the equivalent of `git push` to `master` (or merging a PR to master)
-
-## Architecture
-
-### Pure components
-
-Every stateless pure component is found under `./components`.
-
-Every component that has to do with styling the post's markup
-is found under `./components/post/`
-
-These components make up the _style guide_ of the application.
-
-### Blog posts
-
-Every blog post is a static page hosted under `pages/$year/`.
-
-This allows every post to load arbitrary modules, have custom layouts
-and take advantage of automatic code splitting and lazy loading.
-
-This means that the bloat of a single post doesn't "rub off on" the
-rest of the site.
-
-An index of all posts is maintained in JSON format as `./posts.json`
-for practical reasons.
+`public/_redirects` holds redirects for removed URLs.

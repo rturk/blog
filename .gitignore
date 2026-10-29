@@ -1,8 +1,7 @@
 node_modules
-.next
 dist
-.vercel
+.astro
+.wrangler
 .env
-.output
 .env.local
-.pnpm-debug.log
+.DS_Store
