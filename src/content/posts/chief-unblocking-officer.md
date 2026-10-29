@@ -22,9 +22,9 @@ At some point, leadership stops enabling the work and starts blocking it.
 
 It's all about incentives. If a team is incentivised to pursue financial results relentlessly, it will deliver them. But eventually products will fail, marketing will run out of tricks and sales will collapse.
 
-## Chief Unblocking Officer
+## What a Chief Unblocking Officer does
 
-The traditional picture of a CEO is someone at the top who has the answers and hands out decisions. CEOs are often praised as the smartest person in the room. That model doesn't scale. In a company of any size, the people closest to the problem almost always know more about it than the CEO does.
+The traditional picture of a CEO is someone at the top who has the answers and hands out decisions. CEOs are often praised as the smartest person in the room. This picture doesn't scale. In a company of any size, the people closest to the problem almost always know more about it than the CEO does.
 
 A Chief Unblocking Officer starts from a different question. Not "what should my team do?" but "**what is stopping my team from doing it?**"
 
@@ -46,7 +46,7 @@ Perhaps the most incredible thing about a diverse group of smart people is that 
 
 But different ideas mean disagreement, and many leaders treat disagreement as a problem to suppress. They value harmony, reward people who agree, and slowly build a room where nobody says what they really think.
 
-That room is exactly what failed Boeing. When the people who see the risk don't feel safe raising it, or raise it and aren't heard, the company is flying blind.
+That room is exactly what hurt Boeing. When the people who see the risk don't feel safe raising it, or raise it and aren't heard, the company is flying blind.
 
 A Chief Unblocking Officer protects disagreement. Debate the idea hard, decide, and then commit together. Conflict about ideas is healthy; it's silence that kills companies.
 
