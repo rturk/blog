@@ -32,7 +32,7 @@ Sometimes the blocker is a missing decision. Sometimes it's a missing resource, 
 
 The job is to find those blockers and remove them, every day. In practice, that comes down to four things.
 
-## 1. Hire and develop the best
+## Hire and develop the best
 
 You can't unblock a team that isn't capable of the work. The first job is to bring in people who are better than you at what they do, and then make them even better.
 
@@ -40,7 +40,7 @@ Great people don't need to be managed closely. They need context, trust and room
 
 Developing people matters as much as hiring them. The best leaders measure themselves by how many future leaders they create, not by how indispensable they are.
 
-## 2. Embrace conflict
+## Embrace conflict
 
 Perhaps the most incredible thing about a diverse group of smart people is that different ideas will rise. That's the whole point of hiring them.
 
@@ -50,7 +50,7 @@ That room is exactly what hurt Boeing. When the people who see the risk don't fe
 
 A Chief Unblocking Officer protects disagreement. Debate the idea hard, decide, and then commit together. Conflict about ideas is healthy; it's silence that kills companies.
 
-## 3. Focus on the end-user
+## Focus on the end-user
 
 Internal politics is one of the biggest blockers of all. When teams optimise for their manager, their budget or their metrics, they stop optimising for the customer.
 
@@ -58,7 +58,7 @@ The simplest way to unblock an organisation is to point everyone at the same thi
 
 Intel didn't lose mobile because it lacked the technology. It lost because it was optimising for the business it already had, not for what customers were about to need.
 
-## 4. Relentless passion
+## Relentless passion
 
 None of this works if the leader doesn't care deeply. Unblocking is unglamorous work: chasing decisions, sitting in hard conversations, fixing broken processes, saying no to good ideas so great ones can move.
 
