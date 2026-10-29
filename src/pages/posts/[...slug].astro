@@ -1,7 +1,7 @@
 ---
 import { render } from "astro:content";
 import Base from "../../layouts/Base.astro";
-import { BIO, TWITTER } from "../../consts";
+import { BIO, TWITTER, LINKEDIN } from "../../consts";
 import { getPosts, formatDate, readingTime } from "../../lib/posts";
 
 export async function getStaticPaths() {
@@ -31,7 +31,7 @@ const { title, description, date } = post.data;
       <img src="/rafael-turk.jpeg" alt="" width="56" height="56" />
       <p>
         <strong>Written by Rafael Turk</strong><br />
-        {BIO} <a href={`https://x.com/${TWITTER}`} target="_blank" rel="noopener">Follow on X →</a>
+        {BIO} <a href={`https://x.com/${TWITTER}`} target="_blank" rel="noopener">Follow on X</a> · <a href={`https://www.linkedin.com/in/${LINKEDIN}/`} target="_blank" rel="noopener">Connect on LinkedIn</a>
       </p>
     </aside>
   </article>
