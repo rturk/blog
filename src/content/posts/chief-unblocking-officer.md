@@ -1,10 +1,12 @@
 ---
 title: "Chief Unblocking Officer"
 description: "The CEO's real job isn't to have the answers. It's to remove whatever stands between great people and great work."
-date: 2026-10-29
+date: 2022-10-02
 ---
 
-**Intel** was the world's largest chipmaker for more than 30 years. Then, in less than a decade, it lost almost everything that made it Intel: manufacturing delays let TSMC take the lead in making the most advanced chips, it missed the mobile revolution entirely, Apple replaced Intel processors with its own, and AMD took share in both PCs and data centres. When the AI wave arrived, it was Nvidia that rode it.
+**Intel** was the world's largest chipmaker for more than 30 years. Then, in less than a decade, it lost almost everything that made it Intel: manufacturing delays let TSMC take the lead in making the most advanced chips, Apple replaced Intel processors with its own, and AMD took share in both PCs and data centres.
+
+But its biggest miss was mobile. Intel failed to see that mobile phones would come to dominate the market. When Apple was building the first iPhone, Intel passed on the chance to partner with it, and left the door wide open for ARM to become the clear choice for the entire mobile market. Almost every smartphone that followed was a sale Intel never got.
 
 **Boeing** was once the undisputed name in commercial aviation, a company run by engineers where safety came first. Over the years its culture shifted, and financial efficiency started to win arguments that engineering used to win. Then came the 737 MAX crashes, which killed 346 people, a worldwide grounding of the aircraft, and years of investigations into how warnings from inside the company went unheard.
 
