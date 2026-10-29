@@ -70,6 +70,23 @@ a { color: var(--link); text-underline-offset: 2px; }
 .site-header nav a { color: var(--muted); text-decoration: none; }
 .site-header nav a:hover { color: var(--text); }
 
+/* Home intro */
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.intro img {
+  flex: 0 0 64px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.intro h1 { font-size: 1.25rem; margin: 0 0 2px; }
+.intro p { margin: 0; color: var(--muted); }
+
 /* Post list */
 .posts { list-style: none; margin: 0; padding: 0; }
 .posts li { display: flex; gap: 16px; padding: 6px 0; align-items: baseline; }

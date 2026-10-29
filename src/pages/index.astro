@@ -1,11 +1,20 @@
 ---
 import Base from "../layouts/Base.astro";
+import { BIO, SITE_TITLE } from "../consts";
 import { getPosts, formatDate } from "../lib/posts";
 
 const posts = await getPosts();
 ---
 
 <Base>
+  <section class="intro">
+    <img src="/rafael-turk.jpeg" alt="Rafael Turk" width="64" height="64" />
+    <div>
+      <h1>{SITE_TITLE}</h1>
+      <p>{BIO}</p>
+    </div>
+  </section>
+
   <ul class="posts">
     {posts.map(post => (
       <li>
