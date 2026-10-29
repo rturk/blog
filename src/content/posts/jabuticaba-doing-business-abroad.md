@@ -1,7 +1,7 @@
 ---
 title: "Jabuticaba: What a Poisonous-Looking Fruit Teaches About Doing Business Abroad"
 description: "A fruit that looks poisonous, grows on the trunk and can't be eaten the obvious way, and what it teaches about entering a new market."
-date: 2026-10-29
+date: 2022-11-02
 ---
 
 I once had to explain Brazilian installments, the famous *10 times without interest*, to Amazon's leadership team, Jeff Bezos included. To which the obvious question was: if the customer pays in 10 installments, how come there is no interest? This unique Brazilian payment option is so oddly bizarre for Americans that it took the room quite some time to grasp it. At some points, people were even in denial. It was a strange meeting. I felt as if I was explaining a jabuticaba.
