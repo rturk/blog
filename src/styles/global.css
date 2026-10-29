@@ -101,6 +101,15 @@ a { color: var(--link); text-underline-offset: 2px; }
 .posts .draft { color: var(--muted); font-size: 12px; }
 
 /* Article */
+.back {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--muted);
+  font-size: 14px;
+  text-decoration: none;
+}
+.back:hover { color: var(--text); }
+
 article header { margin-bottom: 32px; }
 article h1 {
   font-size: 2rem;
@@ -128,6 +137,12 @@ article .meta img { width: 28px; height: 28px; border-radius: 50%; }
   margin: 2em 0 0.6em;
 }
 .prose p, .prose ul, .prose ol, .prose blockquote { margin: 0 0 1.2em; }
+/* Justified, with hyphenation to avoid wide gaps between words. */
+.prose p, .prose li {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
 .prose blockquote {
   border-left: 3px solid var(--border);
   padding-left: 16px;
