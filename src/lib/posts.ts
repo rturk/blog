@@ -6,7 +6,12 @@ export async function getPosts() {
   return posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 }
 
-export function formatDate(date: Date, style: "month" | "long" = "long") {
-  if (style === "month") return date.toISOString().slice(0, 7);
+export function formatDate(date: Date, style: "short" | "long" = "long") {
+  if (style === "short") return date.toLocaleDateString("en-US", { year: "numeric", month: "short", timeZone: "UTC" });
   return date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
+}
+
+export function readingTime(body = "") {
+  const words = body.trim().split(/\s+/).filter(Boolean).length;
+  return `${Math.max(1, Math.ceil(words / 230))} min read`;
 }

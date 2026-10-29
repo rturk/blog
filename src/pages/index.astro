@@ -1,28 +1,35 @@
 ---
 import Base from "../layouts/Base.astro";
 import { BIO, SITE_TITLE } from "../consts";
-import { getPosts, formatDate } from "../lib/posts";
+import { getPosts, formatDate, readingTime } from "../lib/posts";
 
 const posts = await getPosts();
 ---
 
 <Base>
   <section class="intro">
-    <img src="/rafael-turk.jpeg" alt="Rafael Turk" width="64" height="64" />
+    <img src="/rafael-turk.jpeg" alt="Rafael Turk" width="72" height="72" />
     <div>
       <h1>{SITE_TITLE}</h1>
       <p>{BIO}</p>
     </div>
   </section>
 
+  <h2 class="section-label">Writing</h2>
   <ul class="posts">
     {posts.map(post => (
       <li>
-        <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date, "month")}</time>
-        <span>
-          <a href={`/posts/${post.id}`}>{post.data.title}</a>
-          {post.data.draft && <span class="draft">draft</span>}
-        </span>
+        <a href={`/posts/${post.id}`}>
+          <div class="row">
+            <span class="title">
+              {post.data.title}
+              {post.data.draft && <span class="draft">draft</span>}
+            </span>
+            <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date, "short")}</time>
+          </div>
+          <p class="desc">{post.data.description}</p>
+          <span class="reading">{readingTime(post.body)}</span>
+        </a>
       </li>
     ))}
   </ul>

@@ -2,9 +2,10 @@
   --bg: #fdfdfc;
   --text: #1c1c1c;
   --muted: #6b6b6b;
-  --link: #0b00eb;
+  --accent: #5b2a86;
+  --accent-soft: rgba(91, 42, 134, 0.3);
   --border: #e6e6e3;
-  --hover: #f0f0ed;
+  --hover: #f4f2f7;
   --code-bg: #f4f4f2;
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -17,9 +18,10 @@
     --bg: #141414;
     --text: #e6e6e3;
     --muted: #9a9a96;
-    --link: #8ab4ff;
+    --accent: #c9a7ec;
+    --accent-soft: rgba(201, 167, 236, 0.35);
     --border: #2a2a2a;
-    --hover: #1f1f1f;
+    --hover: #1d1a21;
     --code-bg: #1c1c1c;
   }
   .astro-code,
@@ -48,57 +50,82 @@ body {
   padding: 0 16px;
 }
 
-a { color: var(--link); text-underline-offset: 2px; }
+a { color: var(--accent); text-underline-offset: 3px; }
 
-::selection { background: #0070f3; color: #fff; }
+::selection { background: var(--accent); color: #fff; }
 
 /* Site header */
 .site-header {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   gap: 16px;
   padding-top: 28px;
   padding-bottom: 28px;
 }
 .site-header .logo {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text);
   text-decoration: none;
 }
-.site-header nav { display: flex; gap: 16px; font-size: 14px; }
-.site-header nav a { color: var(--muted); text-decoration: none; }
-.site-header nav a:hover { color: var(--text); }
+.site-header nav { display: flex; align-items: center; gap: 16px; }
+.site-header nav a { display: flex; color: var(--muted); }
+.site-header nav a:hover { color: var(--accent); }
+.site-header nav svg { width: 18px; height: 18px; }
 
 /* Home intro */
 .intro {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 40px;
+  gap: 20px;
+  margin: 16px 0 56px;
 }
+.intro > div, .posts .title { min-width: 0; }
 .intro img {
-  flex: 0 0 64px;
-  width: 64px;
-  height: 64px;
+  flex: 0 0 72px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
   object-fit: cover;
 }
-.intro h1 { font-size: 1.25rem; margin: 0 0 2px; }
+.intro h1 { font-size: 1.5rem; line-height: 1.2; margin: 0 0 4px; letter-spacing: -0.01em; }
 .intro p { margin: 0; color: var(--muted); }
 
 /* Post list */
-.posts { list-style: none; margin: 0; padding: 0; }
-.posts li { display: flex; gap: 16px; padding: 6px 0; align-items: baseline; }
-.posts time {
-  flex: 0 0 64px;
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.section-label::after { content: ""; flex: 1; border-top: 1px solid var(--border); }
+
+.posts { list-style: none; margin: 0 -12px; padding: 0; }
+.posts a {
+  display: block;
+  padding: 14px 12px;
+  border-radius: 8px;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 150ms ease;
+}
+.posts a:hover { background: var(--hover); }
+.posts .row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+.posts .title { font-weight: 600; }
+.posts a:hover .title { color: var(--accent); }
+.posts time, .posts .reading {
   color: var(--muted);
   font-size: 13px;
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
-.posts a { font-weight: 600; text-decoration: none; }
-.posts a:hover { text-decoration: underline; }
-.posts .draft { color: var(--muted); font-size: 12px; }
+.posts .desc { margin: 4px 0 2px; color: var(--muted); font-size: 15px; }
+.posts .draft { margin-left: 8px; color: var(--muted); font-size: 12px; font-weight: 400; }
 
 /* Article */
 .back {
@@ -108,28 +135,32 @@ a { color: var(--link); text-underline-offset: 2px; }
   font-size: 14px;
   text-decoration: none;
 }
-.back:hover { color: var(--text); }
+.back:hover { color: var(--accent); }
 
-article header { margin-bottom: 32px; }
+article { max-width: 38rem; }
+article header {
+  margin-bottom: 36px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
 article h1 {
-  font-size: 2rem;
-  line-height: 1.2;
-  margin: 0 0 8px;
-  letter-spacing: -0.01em;
+  font-size: 2.25rem;
+  line-height: 1.15;
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
 }
-article .meta {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+article .lede {
+  margin: 0 0 16px;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 1.15rem;
+  line-height: 1.5;
 }
-article .meta img { width: 28px; height: 28px; border-radius: 50%; }
+article .meta { color: var(--muted); font-size: 14px; }
 
 .prose {
   font-family: var(--serif);
   font-size: 1.15rem;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 .prose h2, .prose h3 {
   font-family: var(--sans);
@@ -143,8 +174,13 @@ article .meta img { width: 28px; height: 28px; border-radius: 50%; }
   hyphens: auto;
   -webkit-hyphens: auto;
 }
+.prose a {
+  text-decoration-color: var(--accent-soft);
+  text-decoration-thickness: 1px;
+}
+.prose a:hover { text-decoration-color: var(--accent); }
 .prose blockquote {
-  border-left: 3px solid var(--border);
+  border-left: 3px solid var(--accent-soft);
   padding-left: 16px;
   color: var(--muted);
 }
@@ -165,6 +201,21 @@ article .meta img { width: 28px; height: 28px; border-radius: 50%; }
 }
 .prose pre code { background: none; padding: 0; }
 
+/* Author box at the end of a post */
+.author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 48px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+.author img { flex: 0 0 56px; width: 56px; height: 56px; border-radius: 50%; object-fit: cover; }
+.author p { margin: 0; color: var(--muted); font-size: 15px; }
+.author strong { color: var(--text); font-weight: 600; }
+.author a { text-decoration: none; font-weight: 500; }
+.author a:hover { text-decoration: underline; }
+
 .site-footer {
   margin-top: 64px;
   padding-top: 24px;
@@ -174,3 +225,9 @@ article .meta img { width: 28px; height: 28px; border-radius: 50%; }
   font-size: 13px;
 }
 .site-footer a { color: inherit; }
+
+@media (max-width: 480px) {
+  .intro { gap: 16px; }
+  .intro img { flex-basis: 56px; width: 56px; height: 56px; }
+  article h1 { font-size: 1.85rem; }
+}

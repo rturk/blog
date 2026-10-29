@@ -1,7 +1,8 @@
 ---
 import { render } from "astro:content";
 import Base from "../../layouts/Base.astro";
-import { getPosts, formatDate } from "../../lib/posts";
+import { BIO, TWITTER } from "../../consts";
+import { getPosts, formatDate, readingTime } from "../../lib/posts";
 
 export async function getStaticPaths() {
   const posts = await getPosts();
@@ -18,13 +19,20 @@ const { title, description, date } = post.data;
   <article>
     <header>
       <h1>{title}</h1>
+      <p class="lede">{description}</p>
       <div class="meta">
-        <img src="/rafael-turk.jpeg" alt="" width="28" height="28" />
-        <span>Rafael Turk · <time datetime={date.toISOString()}>{formatDate(date)}</time></span>
+        Rafael Turk · <time datetime={date.toISOString()}>{formatDate(date)}</time> · {readingTime(post.body)}
       </div>
     </header>
     <div class="prose">
       <Content />
     </div>
+    <aside class="author">
+      <img src="/rafael-turk.jpeg" alt="" width="56" height="56" />
+      <p>
+        <strong>Written by Rafael Turk</strong><br />
+        {BIO} <a href={`https://x.com/${TWITTER}`} target="_blank" rel="noopener">Follow on X →</a>
+      </p>
+    </aside>
   </article>
 </Base>
